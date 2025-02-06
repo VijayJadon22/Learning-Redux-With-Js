@@ -1,13 +1,19 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addTodo } from "../redux/actions/todoActions";
 
-const TodoForm = ({ createTodo }) => {
+const TodoForm = () => {
   const [todoText, setTodoText] = useState("");
+  const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (todoText) {
-      createTodo(todoText);
-      setTodoText("");
-    }
+    //earlier we were using methods passed from props
+    //   if (todoText) {
+    //     createTodo(todoText);
+    //     setTodoText("");
+    //   }
+    dispatch(addTodo(todoText)); //usinf redux actions
+    setTodoText("");
   };
 
   return (

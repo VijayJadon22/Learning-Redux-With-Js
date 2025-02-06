@@ -1,6 +1,11 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleTodo } from "../redux/actions/todoActions";
 
-const TodoList = ({ todos, toggleTodo }) => {
+const TodoList = () => {
+  const dispatch = useDispatch();
+  const todos = useSelector((state) => state.todos);
+
   return (
     <div>
       <h3>All Todos</h3>
@@ -9,7 +14,7 @@ const TodoList = ({ todos, toggleTodo }) => {
           <div key={index}>
             <span>{todo.text}</span>
             <button
-              onClick={() => toggleTodo(index)}
+              onClick={() => dispatch(toggleTodo(index))}
               style={{ backgroundColor: todo.completed ? "green" : "red" }}
             >
               {todo.completed ? "Completed" : "Complete"}

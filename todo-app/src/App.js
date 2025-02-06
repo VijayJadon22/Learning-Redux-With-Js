@@ -33,10 +33,12 @@ function App() {
       )
     )
   }
+
+  // style={{display:"flex", justifyContent:"center"}}
   return (
-    <div className="App">
-      <TodoForm createTodo={createTodo} />
-      <TodoList todos={todos} toggleTodo={toggleTodo} />
+    <div className="App" >
+      <TodoForm />
+      <TodoList/>
     </div>
   );
 }
