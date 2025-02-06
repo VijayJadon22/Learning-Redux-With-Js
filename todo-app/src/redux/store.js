@@ -1,6 +1,12 @@
+import { noteReducer } from "./reducers/notesReducers";
 import { todoReducer } from "./reducers/todoReducers";
-import { createStore } from "redux";
+import { combineReducers, createStore } from "redux";
+
+const rootReducer = combineReducers({
+    todo: todoReducer,
+    notes: noteReducer
+})
 
 
-const store = createStore(todoReducer);
+const store = createStore(rootReducer);
 export default store;

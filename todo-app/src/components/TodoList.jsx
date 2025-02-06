@@ -4,7 +4,7 @@ import { toggleTodo } from "../redux/actions/todoActions";
 
 const TodoList = () => {
   const dispatch = useDispatch();
-  const todos = useSelector((state) => state.todos);
+  const todos = useSelector((state) => state.todo.todos);
 
   return (
     <div>
