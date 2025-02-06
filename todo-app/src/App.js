@@ -20,12 +20,18 @@ function App() {
   };
 
   const toggleTodo = (index) => {
-    const allTodos = [...todos];
-    allTodos[index] = {
-      ...allTodos[index],
-      completed: !allTodos[index].completed
-    }
-    setTodos(allTodos);
+    // const allTodos = [...todos];
+    // allTodos[index] = {
+    //   ...allTodos[index],
+    //   completed: !allTodos[index].completed
+    // }
+    // setTodos(allTodos);
+
+    setTodos(state =>
+      state.map((todo, i) =>
+        i === index ? { ...todo, completed: !todo.completed } : todo
+      )
+    )
   }
   return (
     <div className="App">

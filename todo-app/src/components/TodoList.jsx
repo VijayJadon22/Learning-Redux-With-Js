@@ -8,7 +8,10 @@ const TodoList = ({ todos, toggleTodo }) => {
         {todos.map((todo, index) => (
           <div key={index}>
             <span>{todo.text}</span>
-            <button onClick={() => toggleTodo(index)}>
+            <button
+              onClick={() => toggleTodo(index)}
+              style={{ backgroundColor: todo.completed ? "green" : "red" }}
+            >
               {todo.completed ? "Completed" : "Complete"}
             </button>
           </div>
