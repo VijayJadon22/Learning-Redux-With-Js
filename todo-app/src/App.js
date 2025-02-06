@@ -40,7 +40,6 @@ function App() {
     )
   }
 
-  // style={{display:"flex", justifyContent:"center"}}
   return (
     <div className="App" >
       <BrowserRouter>

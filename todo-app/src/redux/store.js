@@ -4,7 +4,7 @@ import { combineReducers, createStore } from "redux";
 
 const rootReducer = combineReducers({
     todo: todoReducer,
-    notes: noteReducer
+    note: noteReducer
 })
 
 
