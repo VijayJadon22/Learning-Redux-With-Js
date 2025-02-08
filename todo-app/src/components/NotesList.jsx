@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteNote } from "../redux/actions/notesActions";
+// import { deleteNote } from "../redux/actions/notesActions";
+import { deleteNote } from "../redux/reducers/notesReducers";
 
 const NotesList = () => {
   const dispatch = useDispatch();
@@ -10,7 +11,7 @@ const NotesList = () => {
       <h2>Notes List</h2>
       <div>
         {notes?.map((note, index) => (
-          <div>
+          <div key={index}>
             <span>{note.text}</span>
             <button onClick={() => dispatch(deleteNote(index))}>Delete</button>
           </div>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addNote } from "../redux/actions/notesActions";
+// import { addNote } from "../redux/actions/notesActions";
+import { add } from "../redux/reducers/notesReducers";
 
 const NotesForm = () => {
   const [notesText, setNotesText] = useState("");
@@ -9,7 +10,7 @@ const NotesForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (notesText) {
-      dispatch(addNote(notesText));
+      dispatch(add(notesText)); //using noteSlice actions
       setNotesText("");
     }
   };

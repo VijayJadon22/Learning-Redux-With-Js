@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTodo } from "../redux/actions/todoActions";
+// import { addTodo } from "../redux/actions/todoActions";
+import { add } from "../redux/reducers/todoReducers";
 
 const TodoForm = () => {
   const [todoText, setTodoText] = useState("");
@@ -12,7 +13,7 @@ const TodoForm = () => {
     //     createTodo(todoText);
     //     setTodoText("");
     //   }
-    dispatch(addTodo(todoText)); //usinf redux actions
+    dispatch(add(todoText)); //using todoSlice actions
     setTodoText("");
   };
 

@@ -1,5 +1,5 @@
-import { noteReducer } from "./reducers/notesReducers";
-import { todoReducer } from "./reducers/todoReducers"
+import noteReducer from "./reducers/notesReducers";
+import todoReducer from "./reducers/todoReducers.js"
 // import { combineReducers, createStore } from "redux";
 import { configureStore } from "@reduxjs/toolkit";
 
@@ -10,10 +10,11 @@ import { configureStore } from "@reduxjs/toolkit";
 
 // const store = createStore(rootReducer);
 // export default store;
-
-export const store = configureStore({
+const store = configureStore({
     reducer: {
-        tood: todoReducer,
+        todo: todoReducer,
         note: noteReducer
     }
-})
+});
+
+export default store;
