@@ -12,14 +12,14 @@ const Home = () => {
         <TodoForm />
         <TodoList />
         <Link to={"/todo"}>
-          <button>Go To TodoPage</button>
+          <button style={{marginTop:"40px"}}>Go To TodoPage</button>
         </Link>
       </div>
       <div style={{ width: "50%", display: "flex", flexDirection: "column" }}>
         <NotesForm />
         <NotesList />
         <Link to={"/note"}>
-          <button>Go To NotePage</button>
+          <button style={{marginTop:"40px"}}>Go To NotePage</button>
         </Link>
       </div>
       
