@@ -1,5 +1,3 @@
-//initial state
-
 import { ADD_NOTE, DELETE_NOTE } from "../actions/notesActions";
 
 const initialState = {

@@ -4,7 +4,7 @@ import { deleteNote } from "../redux/actions/notesActions";
 
 const NotesList = () => {
   const dispatch = useDispatch();
-  const notes = useSelector((state) => state.notes.notes);
+  const notes = useSelector((state) => state.note.notes);
   return (
     <div>
       <h2>Notes List</h2>

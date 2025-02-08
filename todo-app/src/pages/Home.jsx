@@ -6,12 +6,12 @@ import NotesList from "../components/NotesList";
 
 const Home = () => {
   return (
-    <div style={{display:"flex", width:"100%", padding:"50px"}}>
-      <div style={{width:"50%"}}>
+    <div style={{ display: "flex", width: "100%", paddingTop: "50px" }}>
+      <div style={{ width: "50%" }}>
         <TodoForm />
         <TodoList />
       </div>
-      <div style={{width:"50%"}}>
+      <div style={{ width: "50%" }}>
         <NotesForm />
         <NotesList />
       </div>
