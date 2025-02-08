@@ -7,8 +7,8 @@ const initialState = {
 }
 
 // Create a slice of the store for notes
-export const noteSlice = createSlice({
-    name: "note",
+const noteSlice = createSlice({
+    name: "Note",
     initialState: initialState,
     reducers: {
         // Reducer to add a new note to the notes array
