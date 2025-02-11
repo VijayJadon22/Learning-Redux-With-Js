@@ -40,7 +40,7 @@ const TodoForm = () => {
           value={todoText} // Set the value of input to todoText state
           onChange={(e) => setTodoText(e.target.value)} // Update todoText state on input change
         />
-        <button type="submit">Add Todo</button> // Button to submit the form
+        <button type="submit">Add Todo</button> 
       </form>
     </div>
   );

@@ -38,7 +38,7 @@ const NotesForm = () => {
             value={notesText} // Set the value of textarea to notesText state
             onChange={(e) => setNotesText(e.target.value)} // Update notesText state on textarea change
           ></textarea>
-          <button type="submit">Add Note</button> // Button to submit the form
+          <button type="submit">Add Note</button> 
         </form>
       </div>
     </div>
