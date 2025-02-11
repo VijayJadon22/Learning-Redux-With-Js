@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 // import { addTodo } from "../redux/actions/todoActions";
 import { add } from "../redux/reducers/todoReducers";
 
 const TodoForm = () => {
   const [todoText, setTodoText] = useState("");
   const dispatch = useDispatch();
+
+  const notification = useSelector((state) => state.notification.notification);
+  console.log(notification);
   const handleSubmit = (e) => {
     e.preventDefault();
     //earlier we were using methods passed from props
@@ -19,6 +22,9 @@ const TodoForm = () => {
 
   return (
     <div>
+      {notification.includes("Todo") ? (
+        <h3 style={{ color: "green" }}>{notification}</h3>
+      ) : null}
       <form onSubmit={handleSubmit}>
         <input
           type="text"
