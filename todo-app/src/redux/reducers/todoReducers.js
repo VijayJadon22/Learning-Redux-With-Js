@@ -25,7 +25,9 @@ const todoSlice = createSlice({
             )
         },
 
-        
+        setTodos: (state, action) => {
+            state.todos = action.payload;
+        }
     }
 });
 
