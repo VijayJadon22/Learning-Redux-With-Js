@@ -20,15 +20,17 @@ const todoSlice = createSlice({
         },
         // Reducer to toggle the completed status of a todo item based on its index
         toggle: (state, action) => {
-            state.todos = state.todos.map((todo, index) => 
+            state.todos = state.todos.map((todo, index) =>
                 index === action.payload ? { ...todo, completed: !todo.completed } : todo
             )
-        }
+        },
+
+        
     }
 });
 
 // Export the actions to be used in the application
-export const { add, toggle } = todoSlice.actions;
+export const { add, toggle, setTodos } = todoSlice.actions;
 // Export the reducer to be included in the store
 export default todoSlice.reducer;
 
